@@ -271,6 +271,27 @@ img {
 .portfolio-card {
   display: flex;
   flex-direction: column;
+  max-width: 360px;
+}
+.portfolio-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.overlay-text {
+  width: 100%;
+  height: 100%;
+  padding: 32px 30px;
+  padding-bottom: 164px;
+  background-color: rgba(77, 90, 229, 1);
+  color: #f4f4fd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+.portfolio-card:hover .overlay-text {
+  transform: translateY(0);
 }
 .portfolio-card-content {
   padding: 32px 16px;
