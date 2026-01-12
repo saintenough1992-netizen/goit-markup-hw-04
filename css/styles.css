@@ -100,9 +100,10 @@ img {
 }
 .header-nav a:active {
   color: #404bbf;
-  border-bottom: 1px solid #404bbf;
 }
-
+.header-nav-item {
+  position: relative;
+}
 .logo a {
   text-transform: uppercase;
   font-family: Raleway;
@@ -130,7 +131,12 @@ img {
 }
 /* BANNER SECTION STYLING */
 .banner-main {
-  background: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url('../images/people-office.jpg') no-repeat center;
+  background: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/people-office.jpg") no-repeat center;
   background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
@@ -172,16 +178,17 @@ img {
 .features li {
   width: 264px;
 }
-.feature-icon-container{
+.feature-icon-container {
   background-color: #f4f4fd;
   padding: 24px 0;
-  border: 1px solid #8E8F99;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
 }
-.feature-icon{
+.feature-icon {
   display: block;
   margin: 0 auto;
 }
-.features h3{
+.features h3 {
   margin-top: 8px;
 }
 .features p {
@@ -205,6 +212,9 @@ img {
 .team-card {
   background-color: #fff;
   border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-card-content {
   padding: 32px 16px;
@@ -212,7 +222,30 @@ img {
 .team-card h3 {
   margin-bottom: 8px;
 }
+.team-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.team-icon-container a {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  position: relative;
+  margin-top: 8px;
+}
+.team-icon-container a:hover {
+  background-color: #404bbf;
+}
 
+.team-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  fill: #f4f4fd;
+}
 /* PORTFOLIO SECTION STYLING */
 .our-portfolio img {
   width: 360px;
@@ -243,8 +276,11 @@ img {
   color: #f4f4fd;
   padding: 100px 0;
   display: flex;
-  justify-content: start;
-  align-items: center;
+}
+.footer-main .container {
+  display: flex;
+  align-items: top;
+  gap: 120px;
 }
 .logo-content {
   max-width: 264px;
