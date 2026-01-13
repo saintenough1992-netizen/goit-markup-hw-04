@@ -129,7 +129,8 @@ img {
 .header-nav a.current {
   color: #404bbf;
 }
-
+.header-nav a:hover::after,
+.header-nav a:focus::after,
 .header-nav a.current::after {
   content: "";
   position: absolute;
