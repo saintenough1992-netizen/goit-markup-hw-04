@@ -111,6 +111,16 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.header-nav a:target::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #404bbf;
+  position: absolute;
+  top: 69px;
+  left: 0;
+  border-radius: 2px;
+}
 .header-nav a:focus::after,
 .header-nav a:hover::after,
 .header-nav a:active::after {
