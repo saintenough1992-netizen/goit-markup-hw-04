@@ -95,9 +95,7 @@ img {
   padding: 24px 0;
 }
 .header-nav a:hover,
-.header-nav a:focus {
-  color: #404bbf;
-}
+.header-nav a:focus,
 .header-nav a:active {
   color: #404bbf;
 }
@@ -111,17 +109,9 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-nav a:focus::after {
-  content: "";
-  height: 4px;
-  width: 100%;
-  background-color: #404bbf;
-  position: absolute;
-  top: 69px;
-  left: 0;
-  border-radius: 2px;
-}
-.header-nav a:hover::after {
+.header-nav a:focus::after,
+.header-nav a:hover::after,
+.header-nav a:active::after {
   content: "";
   height: 4px;
   width: 100%;
@@ -167,6 +157,8 @@ img {
   background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .banner-main h1 {
   color: #fff;
@@ -214,6 +206,9 @@ img {
   padding: 24px 0;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+  height: 112px;
+  width: 264px;
+  margin: 0 auto;
 }
 .feature-icon {
   display: block;
@@ -235,7 +230,7 @@ img {
 .team-card p {
   text-align: center;
 }
-.our-team ul {
+.team-content {
   display: flex;
   gap: 24px;
   margin-top: 72px;
@@ -255,10 +250,11 @@ img {
 }
 .team-icon-container {
   display: flex;
-  align-items: center;
   gap: 24px;
+  margin-top: 0;
 }
 .team-icon-container a {
+  display: block;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -269,7 +265,9 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-icon-container a:hover {
+.team-icon-container a:hover,
+.team-icon-container a:focus,
+.team-icon-container a:active {
   background-color: #404bbf;
 }
 
@@ -296,6 +294,9 @@ img {
   display: flex;
   flex-direction: column;
   max-width: 360px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-overlay {
   position: relative;
@@ -341,7 +342,7 @@ img {
 }
 .footer-main .container {
   display: flex;
-  align-items: top;
+  align-items: baseline;
   gap: 120px;
 }
 .logo-content {
@@ -352,4 +353,17 @@ img {
 }
 .footer-main a {
   color: #f4f4fd;
+}
+.social-media .team-icon-container {
+  gap: 16px;
+}
+.social-media .team-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-media a:hover .team-icon,
+.social-media a:focus .team-icon,
+.social-media a:active .team-icon {
+  fill: #31d0aa;
 }
